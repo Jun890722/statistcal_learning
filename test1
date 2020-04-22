@@ -1,0 +1,9 @@
+library(MASS)
+library(readr)
+library(foreign)
+library(survey)
+library(haven)
+
+setwd('/Volumes/Work - 数据/UP/simulation/第二章')
+dt <- read_sav('cgss2015.sav')
+dt <- dt[which(is.na(dt$weight)!=TRUE),]
